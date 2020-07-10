@@ -18,6 +18,7 @@ ingredients.each do |ingredient|
   hash_ingredients = JSON.parse(ingredient)
   array_ingredients = hash_ingredients['drinks']
   array_ingredients.each do |drink|
-    p drink['strIngredient1']
+    ingredient = Ingredient.new(name: drink['strIngredient1'])
+    ingredient.save!
   end
 end
