@@ -1,0 +1,12 @@
+<h1>Add your recipe for <%= @cocktail_id %></h1>
+
+
+<%= simple_form_for [@cocktail, @dose] do |f| %>
+  <%= f.input :description %>
+  <%= f.association :ingredient %>
+  <%= f.submit "Add new recipe", class: "btn btn-primary" %>
+<% end %>
+
+
+<%= link_to 'Back', cocktails_path %>
+
